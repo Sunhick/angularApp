@@ -47,7 +47,11 @@ html
             #bs-example-navbar-collapse-1.collapse.navbar-collapse
               ul.nav.navbar-nav.navbar-right
                 li
-                  a(href="signup") Sign up
-                li
-                  a(href="login") Login
+                  a(href="signup") 
+                        span.glyphicon.glyphicon-log-in
+                        |  Login
     block content
+    .navbar.navbar-fixed-bottom
+        .container.text-center
+            p.text-muted.credit
+                |Copyright (c) 2016. All rights reserved. University of Colorado, Boulder
