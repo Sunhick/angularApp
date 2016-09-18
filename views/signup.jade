@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-4
+        h1 Login with Email Id
+        form#login-form(role='form', action='javascript:;', method='post', autocomplete='off')
+          .form-group
+            label.sr-only(for='email') Email
+            input#email.form-control(type='email', name='email', placeholder='somebody@example.com')
+          .form-group
+            label.sr-only(for='key') Password
+            input#key.form-control(type='password', name='key', placeholder='Password')
+          .checkbox
+            span.character-checkbox(onclick='showPassword()')
+            span.label Show password
+          input#btn-login.btn.btn-custom.btn-lg.btn-block(type='submit', value='Log in')
+        a.forget(href='javascript:;', data-toggle='modal', data-target='.forget-modal') Forgot your password?
