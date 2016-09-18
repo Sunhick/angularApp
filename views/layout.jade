@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title
+    title YPod
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/stylesheets/style.css')
@@ -24,7 +24,7 @@ html
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand(href='/') YPOD
+            a.navbar-brand(href='/') Y-POD
 
            #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
@@ -33,7 +33,13 @@ html
                             span.glyphicon.glyphicon-home
                             |  Home 
                     li
-                      a(href='downloads') Downloads
+                      a(href='downloads')
+                        span.glyphicon.glyphicon-download
+                        |  Downloads
+                    li
+                      a(href='https://github.com/DrewMeyersCUboulder/UPOD_Bridge')
+                        span.glyphicon.glyphicon-link
+                        |  Github
                     li.dropdown
                       a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                         | About us 
@@ -51,7 +57,8 @@ html
                         span.glyphicon.glyphicon-log-in
                         |  Login
     block content
-    .navbar.navbar-fixed-bottom
+    .footer.navbar-fixed-bottom
         .container.text-center
             p.text-muted.credit
-                |Copyright (c) 2016. All rights reserved. University of Colorado, Boulder
+                span.glyphicon.glyphicon-copyright-mark
+                |  2016. All rights reserved. University of Colorado, Boulder
