@@ -10,9 +10,10 @@ html
     script(type='text/javascript', src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
     script(type='text/javascript', src='/bower_components/angular/angular.min.js')
     script(type='text/javascript', src='/bower_components/angular-route/angular-route.min.js')
+    script(type='text/javascript', src='/javascripts/module.js')
     // add additional headers if required
     block addHeaders
-  body
+  body(ng-app="testApp")
     .container-fluid
       nav.navbar.navbar-inverse.navbar-fixed-top
         .container-fluid
@@ -28,9 +29,9 @@ html
            #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
                     li.active
-                      a(href='/')
-                        | Home 
-                        span.sr-only (current)
+                      a(href='/') 
+                            span.glyphicon.glyphicon-home
+                            |  Home 
                     li
                       a(href='downloads') Downloads
                     li.dropdown
