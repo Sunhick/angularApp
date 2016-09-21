@@ -1,3 +1,8 @@
+//
+//  @Author: Sunil bn <sunhick@gmail.com>
+//
+//  Copyright (c) 2016. University of Colorado, boulder
+//
 doctype html
 html
   head
@@ -11,9 +16,12 @@ html
     script(type='text/javascript', src='/bower_components/angular/angular.min.js')
     script(type='text/javascript', src='/bower_components/angular-route/angular-route.min.js')
     script(type='text/javascript', src='/javascripts/module.js')
+    script(type='text/javascript', src='/filters/urlFilter.js')
+    script(type='text/javascript', src='/javascripts/mainController.js')
+
     // add additional headers if required
     block addHeaders
-  body(ng-app="testApp")
+  body(ng-cloak ng-app="testApp")
     .container-fluid
       nav.navbar.navbar-inverse.navbar-fixed-top
         .container-fluid
@@ -27,28 +35,11 @@ html
             a.navbar-brand(href='/') Y-POD
 
            #bs-example-navbar-collapse-1.collapse.navbar-collapse
-            ul.nav.navbar-nav
-                    li.active
-                      a(href='/') 
-                            span.glyphicon.glyphicon-home
-                            |  Home 
-                    li
-                      a(href='downloads')
-                        span.glyphicon.glyphicon-download
-                        |  Downloads
-                    li
-                      a(href='https://github.com/DrewMeyersCUboulder/UPOD_Bridge')
-                        span.glyphicon.glyphicon-link
-                        |  Github
-                    li.dropdown
-                      a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                        | About us 
-                        span.caret
-                      ul.dropdown-menu
-                        li
-                          a(href='projects') Projects
-                        li
-                          a(href='contactus') Contact us
+            ul.nav.navbar-nav(ng-controller = "mainController as mainCtrl")
+                      li(ng-repeat="headerMenu in mainCtrl.headerMenus" ng-class="{active : mainCtrl.activeMenu == headerMenu.name}")
+                        a(ng-href="{{ headerMenu.link | urlFilter }}" ng-click="mainCtrl.activate($index)")
+                          span(ng-class="'{{headerMenu.glyphicon}}'")
+                            |  {{headerMenu.name}}
             // Collect the nav links, forms, and other content for toggling
             #bs-example-navbar-collapse-1.collapse.navbar-collapse
               ul.nav.navbar-nav.navbar-right
