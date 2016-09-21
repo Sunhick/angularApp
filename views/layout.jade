@@ -9,8 +9,11 @@ html
     title YPod
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css')
+
     script(type='text/javascript', src='/bower_components/jquery/dist/jquery.min.js')
     script(type='text/javascript', src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
     script(type='text/javascript', src='/bower_components/angular/angular.min.js')
@@ -18,6 +21,8 @@ html
     script(type='text/javascript', src='/javascripts/module.js')
     script(type='text/javascript', src='/filters/urlFilter.js')
     script(type='text/javascript', src='/javascripts/mainController.js')
+
+    base(href="/")
 
     // add additional headers if required
     block addHeaders
@@ -47,7 +52,7 @@ html
                   a(href="signup") 
                         span.glyphicon.glyphicon-log-in
                         |  Login
-    block content
+    div(ng-view)
     .footer.navbar-fixed-bottom
         .container.text-center
             p.text-muted.credit
