@@ -1,9 +1,9 @@
 /**
- *  @Author: Sunil bn <sunhick@gmail.com>
- *  @Desc: main controller 
- *
- *  Copyright (c) 2016. University of Colorado, boulder
- */
+*  @Author: Sunil bn <sunhick@gmail.com>
+*  @Desc: main controller 
+*
+*  Copyright (c) 2016. University of Colorado, boulder
+*/
 var testApp = angular.module('testApp');
 testApp.controller('mainController', function(){
     var self = this;

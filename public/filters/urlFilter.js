@@ -1,9 +1,9 @@
 /**
- *  @Author: Sunil bn <sunhick@gmail.com>
- *  @Desc: Login controller 
- *
- *  Copyright (c) 2016. University of Colorado, boulder
- */
+*  @Author: Sunil bn <sunhick@gmail.com>
+*  @Desc: Login controller 
+*
+*  Copyright (c) 2016. University of Colorado, boulder
+*/
 'use strict';
 
 var testApp = angular.module('testApp');
